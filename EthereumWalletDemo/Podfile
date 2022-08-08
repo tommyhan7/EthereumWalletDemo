@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EthereumWalletDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'EthereumKit.swift', '~> 0.11.0'
+
+  target 'EthereumWalletDemoTests' do
+    inherit! :search_paths
+    pod 'EthereumKit.swift', '~> 0.11.0'
+  end
+
+  target 'EthereumWalletDemoUITests' do
+    pod 'EthereumKit.swift', '~> 0.11.0'
+  end
+
+end
