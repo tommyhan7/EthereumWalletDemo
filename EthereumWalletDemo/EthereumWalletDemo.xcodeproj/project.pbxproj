@@ -233,7 +233,6 @@
 				F5F173363571A252D54DD2C9 /* Pods-EthereumWalletDemoTests.debug.xcconfig */,
 				6D3CDC8319D2EFA604D11FA5 /* Pods-EthereumWalletDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,7 +247,7 @@
 				35BC666428A0C3A400A96890 /* Sources */,
 				35BC666528A0C3A400A96890 /* Frameworks */,
 				35BC666628A0C3A400A96890 /* Resources */,
-				D2EA4FB6B42134FC480D4752 /* [CP] Embed Pods Frameworks */,
+				7BFCACF60BCADA02C5195C85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,7 +266,7 @@
 				35BC667928A0C3A600A96890 /* Sources */,
 				35BC667A28A0C3A600A96890 /* Frameworks */,
 				35BC667B28A0C3A600A96890 /* Resources */,
-				594FC9B2C663D6CB2B4DB70B /* [CP] Embed Pods Frameworks */,
+				09B05466643923E36AE890F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,7 +286,7 @@
 				35BC668328A0C3A600A96890 /* Sources */,
 				35BC668428A0C3A600A96890 /* Frameworks */,
 				35BC668528A0C3A600A96890 /* Resources */,
-				0C5DA59120A7893876A64EC4 /* [CP] Embed Pods Frameworks */,
+				20453936122A3CB4E55D4F34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,24 +390,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0C5DA59120A7893876A64EC4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		594FC9B2C663D6CB2B4DB70B /* [CP] Embed Pods Frameworks */ = {
+		09B05466643923E36AE890F2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,7 +407,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemoTests/Pods-EthereumWalletDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2EA4FB6B42134FC480D4752 /* [CP] Embed Pods Frameworks */ = {
+		20453936122A3CB4E55D4F34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BFCACF60BCADA02C5195C85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -671,8 +670,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,8 +702,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

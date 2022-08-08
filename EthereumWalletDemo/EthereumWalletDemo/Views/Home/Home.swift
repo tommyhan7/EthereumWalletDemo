@@ -39,40 +39,16 @@ struct Home: View {
         let currentAccount = accounts
         NavigationView {
             List {
-                VStack {
-                    Text("userModel.nickname").font(.headline)
-                        .contentShape(Rectangle())
-                        .onTapGesture(perform: {
-
-                        })
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-
-                    Text("userModel.nickname").font(.headline)
-                        .contentShape(Rectangle())
-                        .onTapGesture(perform: {
-
-                        })
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                }
+                HomeHeader()
                 .padding(100)
                 ForEach(accounts) { account in
                     NavigationLink {
-                        Text("Item at \(account.name)")
+                        Text("Item at \(account.name!)")
                     } label: {
-                        Text(account.name)
+                        Text(account.name!)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+                .onDelete(perform: deleteToken)
             }
             .listStyle(.plain)
             Text("Select an item")
@@ -224,7 +200,7 @@ struct Home: View {
 
     private func deleteToken(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { accounts[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
