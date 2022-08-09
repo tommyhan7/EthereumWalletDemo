@@ -20,10 +20,6 @@ struct HomeHeaderView: View {
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.init(hex: 0x4595f4), lineWidth: 2))
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-
-                Text(viewModel.persistenceController.currentAccount?.name ?? "").font(.headline)
-                    .contentShape(Rectangle())
                     .onTapGesture(perform: {
                         isPresenting = true
                     })
@@ -35,6 +31,10 @@ struct HomeHeaderView: View {
                             }
                         }
                     }
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+
+                Text(viewModel.persistenceController.currentAccount?.name ?? "").font(.headline)
+                    .contentShape(Rectangle())
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
 
                 Text(viewModel.totalValueString).font(.system(size: 12))

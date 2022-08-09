@@ -58,9 +58,11 @@ struct HomeView: View {
 
                         Spacer()
 
-                        Image("right-arrow")
+                        Image("Detail_Disclosure")
+                            .renderingMode(.template)
                             .resizable().aspectRatio(contentMode: .fit)
-                            .frame(width: 60, height: 60)
+                            .frame(width: 10, height: 20)
+                            .tint(Color.init(hex: 0x444444))
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                     }
                     .contentShape(Rectangle())
@@ -70,6 +72,15 @@ struct HomeView: View {
                     }
 
                     Divider()
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+
+                    NavigationLink(
+                        destination: TokenView(selectedTokenAbbr: selectedTokenAbbr),
+                        isActive: $shouldNavigateToTokenPage
+                    ){
+                        EmptyView()
+                            .frame(width: 0, height: 0, alignment: .bottom)
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -100,8 +111,7 @@ struct HomeView: View {
                             .frame(width: 20, height: 20).disabled(viewModel.isFetchingPrice)
                     }
                 }
-            }
-            .toast(isShow: $viewModel.isShowingToast, info:  viewModel.toastMessage, duration: 1)
+            }.toast(isShow: $viewModel.isShowingToast, info:  viewModel.toastMessage, duration: 1)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
