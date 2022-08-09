@@ -14,6 +14,18 @@ class HomeViewModel: ObservableObject {
         animation: .default)
     var accounts: FetchedResults<Account>
 
+    @Published var isFetchingPrice = false
+
+    func fetchPrice(){
+        isFetchingPrice = true
+        let service = EthereumNetworkService()
+        service.startService()
+        service.getPriceData {
+            self.objectWillChange.send()
+            self.isFetchingPrice = false
+        }
+    }
+
     func deleteToken(offsets: IndexSet) {
         withAnimation {
             offsets.map { accounts[$0] }.forEach(viewContext.delete)

@@ -1,0 +1,144 @@
+{
+  "data": [
+    {
+        "walletAddress": "0xa08a0d955288677188200118e6f8e27543cd761a",
+        "iconName": "Account1",
+        "nickname": "Account 1",
+        "tokens": [
+            {
+                "abbr": "BTC",
+                "count": 28.1745675897654
+            },
+            {
+                "abbr": "ETH",
+                "count": 70.5098453523584
+            },
+            {
+                "abbr": "XRP",
+                "count": 45.39087976453554
+            },
+            {
+                "abbr": "BNB",
+                "count": 67.01414950513691
+            },
+            {
+                "abbr": "EOS",
+                "count": 23.75649434123553
+            }
+        ]
+    },
+    {
+      "walletAddress": "0xd571926d7c4858f63c1ef75888a36198524784ba",
+      "iconName": "Account2",
+      "nickname": "Account 2",
+      "tokens": [
+        {
+          "abbr": "BTC",
+          "count": 86.61964290060533
+        },
+        {
+          "abbr": "ETH",
+          "count": 32.2017511535303
+        },
+        {
+          "abbr": "XRP",
+          "count": 120.1977896789606
+        },
+        {
+          "abbr": "BNB",
+          "count": 64.20031432543208
+        },
+        {
+          "abbr": "EOS",
+          "count": 69.09157901239536
+        },
+        {
+          "abbr": "TRX",
+          "count": 54.6906789789876526
+        },
+        {
+          "abbr": "LTC",
+          "count": 57.503422371209599
+        },
+        {
+          "abbr": "XLM",
+          "count": 64.9178226051293667
+        }
+      ]
+    },
+    {
+        "walletAddress": "0xa86da284a19fb31b8d379e03a756c09017e4065b",
+        "iconName": "Account3",
+        "nickname": "Account 3",
+        "tokens": [
+            {
+                "abbr": "BTC",
+                "count": 110.8376588675836
+            },
+            {
+                "abbr": "ETH",
+                "count": 4.574638743765443
+            },
+            {
+                "abbr": "XRP",
+                "count": 101.7476237280945
+            },
+            {
+                "abbr": "BNB",
+                "count": 9.3747568765897902
+            },
+            {
+                "abbr": "EOS",
+                "count": 8.987765486459288
+            },
+            {
+                "abbr": "TRX",
+                "count": 30.619747769619151
+            },
+            {
+                "abbr": "LTC",
+                "count": 3.3165741561103474
+            },
+            {
+                "abbr": "XLM",
+                "count": 12.127455862657035
+            },
+            {
+                "abbr": "ADA",
+                "count": 68.052204282766105
+            }
+        ]
+    },
+    {
+      "walletAddress": "0xbd0e83e1d11b5a47cef8d026f68335b079654117",
+      "iconName": "Account4",
+      "nickname": "Account 4",
+      "tokens": [
+        {
+          "abbr": "BTC",
+          "count": 0.730186546223257
+        },
+        {
+          "abbr": "ETH",
+          "count": 4.5152954326478204
+        },
+        {
+          "abbr": "XRP",
+          "count": 7.563148289256047
+        },
+        {
+          "abbr": "BNB",
+          "count": 10.2104296281416727
+        },
+        {
+          "abbr": "EOS",
+          "count": 19.916604690065903
+        },
+        {
+          "abbr": "TRX",
+          "count": 5.9486786458364429
+        }
+      ]
+    }
+  ]
+}

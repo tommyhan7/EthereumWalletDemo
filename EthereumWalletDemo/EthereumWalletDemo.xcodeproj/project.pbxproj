@@ -25,6 +25,18 @@
 		35BC66BA28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
 		35BC66BB28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
 		35BC66BC28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
+		35BC66FC28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
+		35BC66FD28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
+		35BC66FE28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
+		35BC670028A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
+		35BC670128A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
+		35BC670228A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
+		35BC670828A2328A00A96890 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670728A2328A00A96890 /* Toast.swift */; };
+		35BC670928A2328A00A96890 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670728A2328A00A96890 /* Toast.swift */; };
+		35BC670A28A2328A00A96890 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670728A2328A00A96890 /* Toast.swift */; };
+		35BC670C28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
+		35BC670D28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
+		35BC670E28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
 		7111334EFBF0CFED17191C96 /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A40EB92CE16AFBB54B2CD6F /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework */; };
 		DD7CFFB4981AA2E1719D2E9C /* Pods_EthereumWalletDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2517652DF18C3F5D0AC45E26 /* Pods_EthereumWalletDemoTests.framework */; };
 		E438FE64E21756A68D3E5DE3 /* Pods_EthereumWalletDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D068DFB2C0B6372FFEC6B05C /* Pods_EthereumWalletDemo.framework */; };
@@ -65,6 +77,10 @@
 		35BC66AF28A0F59100A96890 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		35BC66B528A0F5EF00A96890 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		35BC66B928A1006200A96890 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		35BC66FB28A2016600A96890 /* AvatarGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarGenerator.swift; sourceTree = "<group>"; };
+		35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumNetworkService.swift; sourceTree = "<group>"; };
+		35BC670728A2328A00A96890 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		35BC670B28A2331700A96890 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		522BF5F397723F5647BC44CC /* Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A40EB92CE16AFBB54B2CD6F /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3CDC8319D2EFA604D11FA5 /* Pods-EthereumWalletDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumWalletDemoTests.release.xcconfig"; path = "Target Support Files/Pods-EthereumWalletDemoTests/Pods-EthereumWalletDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +143,7 @@
 		35BC666A28A0C3A400A96890 /* EthereumWalletDemo */ = {
 			isa = PBXGroup;
 			children = (
+				35BC66FA28A2014100A96890 /* Utils */,
 				35BC669D28A0EFF100A96890 /* Services */,
 				35BC669C28A0EFDF00A96890 /* Models */,
 				35BC66B328A0F59E00A96890 /* ViewModels */,
@@ -184,6 +201,7 @@
 		35BC669D28A0EFF100A96890 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -211,6 +229,16 @@
 				35BC66B528A0F5EF00A96890 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		35BC66FA28A2014100A96890 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				35BC670B28A2331700A96890 /* Extenstions.swift */,
+				35BC66FB28A2016600A96890 /* AvatarGenerator.swift */,
+				35BC670728A2328A00A96890 /* Toast.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		DB8B992CFD4F8336E2EA7032 /* Frameworks */ = {
@@ -494,10 +522,14 @@
 			files = (
 				35BC667828A0C3A600A96890 /* EthereumWalletDemo.xcdatamodeld in Sources */,
 				35BC66B628A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
+				35BC670028A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
 				35BC667528A0C3A600A96890 /* Persistence.swift in Sources */,
+				35BC670C28A2331700A96890 /* Extenstions.swift in Sources */,
 				35BC66B028A0F59100A96890 /* Home.swift in Sources */,
 				35BC66BA28A1006200A96890 /* HomeHeader.swift in Sources */,
 				35BC666E28A0C3A400A96890 /* ContentView.swift in Sources */,
+				35BC670828A2328A00A96890 /* Toast.swift in Sources */,
+				35BC66FC28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC666C28A0C3A400A96890 /* EthereumWalletDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,9 +539,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BC66B128A0F59100A96890 /* Home.swift in Sources */,
+				35BC670928A2328A00A96890 /* Toast.swift in Sources */,
+				35BC66FD28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC66BB28A1006200A96890 /* HomeHeader.swift in Sources */,
 				35BC66B728A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
 				35BC668228A0C3A600A96890 /* EthereumWalletDemoTests.swift in Sources */,
+				35BC670D28A2331700A96890 /* Extenstions.swift in Sources */,
+				35BC670128A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +557,10 @@
 				35BC66B228A0F59100A96890 /* Home.swift in Sources */,
 				35BC668E28A0C3A600A96890 /* EthereumWalletDemoUITestsLaunchTests.swift in Sources */,
 				35BC66B828A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
+				35BC66FE28A2016600A96890 /* AvatarGenerator.swift in Sources */,
+				35BC670228A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
+				35BC670E28A2331700A96890 /* Extenstions.swift in Sources */,
+				35BC670A28A2328A00A96890 /* Toast.swift in Sources */,
 				35BC66BC28A1006200A96890 /* HomeHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
