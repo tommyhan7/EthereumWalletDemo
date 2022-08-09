@@ -34,4 +34,85 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+
+    var currentAccount: Account? {
+        let accounts = allAccounts
+        if accounts.isEmpty {
+            return nil
+        } else {
+            for account in accounts {
+                if account.isCurrent {
+                    return account
+                }
+            }
+            return accounts.first
+        }
+    }
+
+    var allAccounts: [Account] {
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Account")
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Account.name, ascending: true)]
+        return (try? container.viewContext.fetch(request) as? [Account]) ?? []
+    }
+
+    func value(of tokenName: String) -> Double {
+        guard let tokens = currentAccount?.tokens else {
+            return 0
+        }
+        for token in tokens {
+            if let currentToken = token as? Token, let currentPrice = EthereumNetworkService.priceDict[currentToken.name ?? ""], tokenName == currentToken.name {
+                return currentToken.quantity * currentPrice
+            }
+        }
+        return 0
+    }
+
+    func totalValue() -> Double {
+        guard let tokens = currentAccount?.tokens else {
+            return 0
+        }
+        var totalSum: Double = 0
+        for token in tokens {
+            if let currentToken = token as? Token, let currentPrice = EthereumNetworkService.priceDict[currentToken.name ?? ""] {
+                totalSum += currentToken.quantity * currentPrice
+            }
+        }
+        return totalSum
+    }
+
+    func change(to account: Account) {
+        currentAccount?.isCurrent = false
+        account.isCurrent = true
+
+        do {
+            try container.viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
+    func delete(token: Token) {
+        guard let tokens = currentAccount?.tokens else {
+            return
+        }
+        let tokenSet: NSMutableSet = NSMutableSet.init(set: tokens)
+        for currentToken in tokenSet {
+            if let currentTokenObj = currentToken as? Token, currentTokenObj.name == token.name {
+                tokenSet.remove(currentToken)
+            }
+        }
+        currentAccount?.tokens = tokenSet
+
+        do {
+            try container.viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 }

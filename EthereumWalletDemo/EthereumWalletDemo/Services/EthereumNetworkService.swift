@@ -45,7 +45,7 @@ class EthereumNetworkService {
         ethereumService.stop()
     }
 
-    func getPriceData(completion: @escaping (() -> Void)) {
+    func getPriceData(completion: @escaping () -> Void) {
         let queue = DispatchQueue.init(label: "getPriceData")
         let group = DispatchGroup()
 
@@ -86,6 +86,7 @@ class EthereumNetworkService {
             DispatchQueue.main.async {
                 UserDefaults.standard.setValue(EthereumNetworkService.priceDict, forKey: EthereumNetworkService.pricesKey)
                 UserDefaults.standard.synchronize()
+                completion()
             }
         }
         return

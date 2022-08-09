@@ -9,35 +9,34 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Account.name, ascending: true)],
-        animation: .default)
-    var accounts: FetchedResults<Account>
 
+    @Published var isShowingToast = false
     @Published var isFetchingPrice = false
+    @Published var toastMessage = ""
+    
+    let ethereumNetworkService = EthereumNetworkService.init()
+    let persistenceController = PersistenceController.shared
 
-    func fetchPrice(){
+    init() {
+        ethereumNetworkService.startService()
+    }
+
+    func fetchPrice(completion: @escaping ([String: Double]) -> Void) {
         isFetchingPrice = true
         let service = EthereumNetworkService()
         service.startService()
         service.getPriceData {
+            completion(EthereumNetworkService.priceDict)
             self.objectWillChange.send()
             self.isFetchingPrice = false
         }
     }
 
-    func deleteToken(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { accounts[$0] }.forEach(viewContext.delete)
+    func copyAddressToClipBoard() {
+        let pasteBoard = UIPasteboard.general
+        pasteBoard.string = PersistenceController.shared.currentAccount?.address
 
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        self.isShowingToast = true
+        self.toastMessage = "Address has been copied to pasteboard!"
     }
 }

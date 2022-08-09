@@ -12,27 +12,30 @@ struct HomeView: View {
 
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
 
-    @State private var showingSelectAccounts = false
+    @State private var isShowingSelectAccounts = false
     @State private var navigateToSend = false
-    @State private var selectedTokenAbbr = "";
-    @State private var shouldNavigateToTokenPage = false;
+    @State private var selectedTokenAbbr = ""
+    @State private var shouldNavigateToTokenPage = false
 
-//    var destination : some View {
-//        return TokenPageView(selectedTokenAbbr: selectedTokenAbbr)
-//    }
+    private var tokens: [Token] {
+        if let tokens = viewModel.persistenceController.currentAccount?.tokens {
+            return Array.init(_immutableCocoaArray: tokens)
+        } else {
+            return []
+        }
+    }
 
     var body: some View {
         NavigationView {
             List {
-                HomeHeaderView()
-                ForEach(viewModel.accounts) { account in
+                HomeHeaderView(isPresenting: $isShowingSelectAccounts)
+                ForEach(tokens) { token in
                     NavigationLink {
-                        Text("Item at \(account.name!)")
+                        Text("Item at \(token.name!)")
                     } label: {
-                        Text(account.name!)
+                        Text(token.name!)
                     }
                 }
-                .onDelete(perform: viewModel.deleteToken)
             }
             .listStyle(.plain)
             Text("Select an item")
@@ -52,13 +55,16 @@ struct HomeView: View {
             }
         }
         .navigationBarItems(trailing: Button(action: {
-            viewModel.fetchPrice()
+            viewModel.fetchPrice { priceDict in
+                // Do nothing
+            }
         }) {
             Image("Refresh")
                 .resizable().aspectRatio(contentMode: .fit)
                 .frame(width: 20, height: 20).disabled(viewModel.isFetchingPrice)
         })
         .navigationViewStyle(StackNavigationViewStyle())
+        .toast(isShow: $viewModel.isShowingToast, info:  viewModel.toastMessage, duration: 1)
     }
 }
 
