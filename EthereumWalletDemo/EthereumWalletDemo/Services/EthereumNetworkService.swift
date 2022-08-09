@@ -151,7 +151,7 @@ class EthereumNetworkService {
                     }
                     // "tokens"
                     if let tokens = account["tokens"] as? [[String: Any]] {
-                        let tokenEntities: NSSet = []
+                        let tokenEntities: NSMutableSet = []
                         for token in tokens {
                             let tokenEntity = Token(context: context)
                             if let abbr = token["abbr"] as? String {
@@ -160,7 +160,7 @@ class EthereumNetworkService {
                             if let count = token["count"] as? Double {
                                 tokenEntity.quantity = count
                             }
-                            tokenEntities.adding(tokenEntity)
+                            tokenEntities.add(tokenEntity)
                         }
                         accountEntity.tokens = tokenEntities
                     }

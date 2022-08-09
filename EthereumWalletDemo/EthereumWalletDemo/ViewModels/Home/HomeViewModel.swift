@@ -17,6 +17,20 @@ class HomeViewModel: ObservableObject {
     let ethereumNetworkService = EthereumNetworkService.init()
     let persistenceController = PersistenceController.shared
 
+    var totalValueString: String {
+        return "$" + (persistenceController.totalValue() == 0 ? "0" : "\(persistenceController.totalValue())")
+    }
+
+    var trimmedAddress: String {
+        guard let address = persistenceController.currentAccount?.address as? NSString else {
+            return "Error Occured"
+        }
+        let prefix = address.substring(to: 6)
+        let suffix = address.substring(from: address.length - 4)
+
+        return "\(prefix)...\(suffix)"
+    }
+
     init() {
         ethereumNetworkService.startService()
     }
@@ -34,7 +48,7 @@ class HomeViewModel: ObservableObject {
 
     func copyAddressToClipBoard() {
         let pasteBoard = UIPasteboard.general
-        pasteBoard.string = PersistenceController.shared.currentAccount?.address
+        pasteBoard.string = persistenceController.currentAccount?.address
 
         self.isShowingToast = true
         self.toastMessage = "Address has been copied to pasteboard!"
