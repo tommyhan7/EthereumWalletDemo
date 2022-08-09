@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct Home: View {
-    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.colorScheme) var colorScheme
 
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Account.name, ascending: true)],
-        animation: .default)
-    private var accounts: FetchedResults<Account>
 
     @State private var showingSelectAccounts = false
     @State private var navigateToSend = false
@@ -36,19 +30,19 @@ struct Home: View {
 //        let tokens = userModel.tokens;
 //        let userModels = viewModel.userModels;
 
-        let currentAccount = accounts
+        let currentAccount = viewModel.accounts
         NavigationView {
             List {
                 HomeHeader()
                 .padding(100)
-                ForEach(accounts) { account in
+                ForEach(viewModel.accounts) { account in
                     NavigationLink {
                         Text("Item at \(account.name!)")
                     } label: {
                         Text(account.name!)
                     }
                 }
-                .onDelete(perform: deleteToken)
+                .onDelete(perform: viewModel.deleteToken)
             }
             .listStyle(.plain)
             Text("Select an item")
@@ -196,21 +190,6 @@ struct Home: View {
 //                })
 //        }
 //        .navigationViewStyle(StackNavigationViewStyle())
-    }
-
-    private func deleteToken(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { accounts[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
 }
 
