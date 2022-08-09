@@ -64,11 +64,12 @@ class EthereumNetworkService {
                 session.dataTask(with: urlRequest) { (data,_,_) in
                     if let resultData = data {
                         do {
-                            let jsonObject = try JSONSerialization.jsonObject(with: resultData, options:[.mutableContainers,.mutableLeaves])
-                            if let priceString = EthereumNetworkService.priceDict[tokenAbbr] {
-                                let price = Double(priceString)
-                                if (price > 0) {
-                                    EthereumNetworkService.priceDict[tokenAbbr] = price
+                            let jsonObject = try JSONSerialization.jsonObject(with: resultData, options:[.mutableContainers,.mutableLeaves]) as? [String: String]
+                            let symbol = jsonObject?["symbol"] as? NSString
+                            if let abbr = symbol?.substring(to: 3), let price = jsonObject?["price"], let _ = EthereumNetworkService.priceDict[abbr] {
+                                let price = Double(price)
+                                if (price ?? 0 > 0) {
+                                    EthereumNetworkService.priceDict[abbr] = price
                                 }
                             }
                             print(jsonObject)
