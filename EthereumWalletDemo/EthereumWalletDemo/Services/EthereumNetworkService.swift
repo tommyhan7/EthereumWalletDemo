@@ -33,6 +33,7 @@ class EthereumNetworkService {
             minLogLevel: .error
         )
 
+        EthereumNetworkService.initializeAccounts()
         EthereumNetworkService.initializePrices()
     }
 
@@ -97,6 +98,82 @@ class EthereumNetworkService {
 
             UserDefaults.standard.setValue(priceDict, forKey: pricesKey)
             UserDefaults.standard.synchronize()
+        }
+    }
+
+    /*{
+        "walletAddress": "0xa08a0d955288677188200118e6f8e27543cd761a",
+        "iconName": "Account1",
+        "nickname": "Account 1",
+        "tokens": [
+            {
+                "abbr": "BTC",
+                "count": 28.1745675897654
+            },
+            {
+                "abbr": "ETH",
+                "count": 70.5098453523584
+            },
+            {
+                "abbr": "XRP",
+                "count": 45.39087976453554
+            },
+            {
+                "abbr": "BNB",
+                "count": 67.01414950513691
+            },
+            {
+                "abbr": "EOS",
+                "count": 23.75649434123553
+            }
+        ]
+    }*/
+    static func initializeAccounts() {
+        let context = PersistenceController.shared.container.viewContext
+        let result = try? context.fetch(NSFetchRequest<NSFetchRequestResult>.init(entityName: "Account")) as? [Account]
+        guard let accounts = result, !accounts.isEmpty else {
+            let asset = NSDataAsset(name: "AccountPreloadData", bundle: Bundle.main)
+            if let accountsData = try? JSONSerialization.jsonObject(with: asset!.data) as? [String: Any], let accounts = accountsData["data"] as? [[String: Any]] {
+                for account in accounts {
+                    let accountEntity = Account(context: context)
+                    // "walletAddress"
+                    if let walletAddress = account["walletAddress"] as? String {
+                        accountEntity.address = walletAddress
+                    }
+                    // "iconName"
+                    if let iconName = account["iconName"] as? String {
+                        accountEntity.avatar = iconName
+                    }
+                    // "nickname"
+                    if let nickname = account["nickname"] as? String {
+                        accountEntity.name = nickname
+                    }
+                    // "tokens"
+                    if let tokens = account["tokens"] as? [[String: Any]] {
+                        let tokenEntities: NSSet = []
+                        for token in tokens {
+                            let tokenEntity = Token(context: context)
+                            if let abbr = token["abbr"] as? String {
+                                tokenEntity.name = abbr
+                            }
+                            if let count = token["count"] as? Double {
+                                tokenEntity.quantity = count
+                            }
+                            tokenEntities.adding(tokenEntity)
+                        }
+                        accountEntity.tokens = tokenEntities
+                    }
+                }
+            }
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            return
         }
     }
 }

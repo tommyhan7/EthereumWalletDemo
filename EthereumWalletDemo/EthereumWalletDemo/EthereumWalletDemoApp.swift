@@ -12,6 +12,7 @@ struct EthereumWalletDemoApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
+        
         WindowGroup {
             Home()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)

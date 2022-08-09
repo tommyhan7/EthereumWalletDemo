@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35BC666C28A0C3A400A96890 /* EthereumWalletDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC666B28A0C3A400A96890 /* EthereumWalletDemoApp.swift */; };
-		35BC666E28A0C3A400A96890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC666D28A0C3A400A96890 /* ContentView.swift */; };
 		35BC667028A0C3A600A96890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BC666F28A0C3A600A96890 /* Assets.xcassets */; };
 		35BC667328A0C3A600A96890 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BC667228A0C3A600A96890 /* Preview Assets.xcassets */; };
 		35BC667528A0C3A600A96890 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC667428A0C3A600A96890 /* Persistence.swift */; };
@@ -37,6 +36,24 @@
 		35BC670C28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
 		35BC670D28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
 		35BC670E28A2331700A96890 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC670B28A2331700A96890 /* Extenstions.swift */; };
+		35BC671528A246F500A96890 /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671328A246F500A96890 /* BuyViewModel.swift */; };
+		35BC671628A246F500A96890 /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671328A246F500A96890 /* BuyViewModel.swift */; };
+		35BC671728A246F500A96890 /* BuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671328A246F500A96890 /* BuyViewModel.swift */; };
+		35BC671828A246F500A96890 /* Buy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671428A246F500A96890 /* Buy.swift */; };
+		35BC671928A246F500A96890 /* Buy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671428A246F500A96890 /* Buy.swift */; };
+		35BC671A28A246F500A96890 /* Buy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671428A246F500A96890 /* Buy.swift */; };
+		35BC671E28A2472700A96890 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671C28A2472700A96890 /* TokenViewModel.swift */; };
+		35BC671F28A2472700A96890 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671C28A2472700A96890 /* TokenViewModel.swift */; };
+		35BC672028A2472700A96890 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671C28A2472700A96890 /* TokenViewModel.swift */; };
+		35BC672128A2472700A96890 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671D28A2472700A96890 /* Token.swift */; };
+		35BC672228A2472700A96890 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671D28A2472700A96890 /* Token.swift */; };
+		35BC672328A2472700A96890 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC671D28A2472700A96890 /* Token.swift */; };
+		35BC672628A2473000A96890 /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672428A2473000A96890 /* Send.swift */; };
+		35BC672728A2473000A96890 /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672428A2473000A96890 /* Send.swift */; };
+		35BC672828A2473000A96890 /* Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672428A2473000A96890 /* Send.swift */; };
+		35BC672928A2473000A96890 /* SendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672528A2473000A96890 /* SendViewModel.swift */; };
+		35BC672A28A2473000A96890 /* SendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672528A2473000A96890 /* SendViewModel.swift */; };
+		35BC672B28A2473000A96890 /* SendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC672528A2473000A96890 /* SendViewModel.swift */; };
 		7111334EFBF0CFED17191C96 /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A40EB92CE16AFBB54B2CD6F /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework */; };
 		DD7CFFB4981AA2E1719D2E9C /* Pods_EthereumWalletDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2517652DF18C3F5D0AC45E26 /* Pods_EthereumWalletDemoTests.framework */; };
 		E438FE64E21756A68D3E5DE3 /* Pods_EthereumWalletDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D068DFB2C0B6372FFEC6B05C /* Pods_EthereumWalletDemo.framework */; };
@@ -64,7 +81,6 @@
 		2517652DF18C3F5D0AC45E26 /* Pods_EthereumWalletDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumWalletDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BC666828A0C3A400A96890 /* EthereumWalletDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthereumWalletDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BC666B28A0C3A400A96890 /* EthereumWalletDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumWalletDemoApp.swift; sourceTree = "<group>"; };
-		35BC666D28A0C3A400A96890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		35BC666F28A0C3A600A96890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35BC667228A0C3A600A96890 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35BC667428A0C3A600A96890 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -81,6 +97,12 @@
 		35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumNetworkService.swift; sourceTree = "<group>"; };
 		35BC670728A2328A00A96890 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		35BC670B28A2331700A96890 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		35BC671328A246F500A96890 /* BuyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewModel.swift; sourceTree = "<group>"; };
+		35BC671428A246F500A96890 /* Buy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buy.swift; sourceTree = "<group>"; };
+		35BC671C28A2472700A96890 /* TokenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
+		35BC671D28A2472700A96890 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		35BC672428A2473000A96890 /* Send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Send.swift; sourceTree = "<group>"; };
+		35BC672528A2473000A96890 /* SendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewModel.swift; sourceTree = "<group>"; };
 		522BF5F397723F5647BC44CC /* Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-EthereumWalletDemo-EthereumWalletDemoUITests/Pods-EthereumWalletDemo-EthereumWalletDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A40EB92CE16AFBB54B2CD6F /* Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumWalletDemo_EthereumWalletDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3CDC8319D2EFA604D11FA5 /* Pods-EthereumWalletDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumWalletDemoTests.release.xcconfig"; path = "Target Support Files/Pods-EthereumWalletDemoTests/Pods-EthereumWalletDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +171,6 @@
 				35BC66B328A0F59E00A96890 /* ViewModels */,
 				35BC669A28A0EFCE00A96890 /* Views */,
 				35BC666B28A0C3A400A96890 /* EthereumWalletDemoApp.swift */,
-				35BC666D28A0C3A400A96890 /* ContentView.swift */,
 				35BC666F28A0C3A600A96890 /* Assets.xcassets */,
 				35BC667428A0C3A600A96890 /* Persistence.swift */,
 				35BC667628A0C3A600A96890 /* EthereumWalletDemo.xcdatamodeld */,
@@ -186,6 +207,9 @@
 		35BC669A28A0EFCE00A96890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35BC671B28A2471B00A96890 /* Token */,
+				35BC671128A246DB00A96890 /* Send */,
+				35BC670F28A246C200A96890 /* Buy */,
 				35BC66AE28A0F55600A96890 /* Home */,
 			);
 			path = Views;
@@ -218,6 +242,9 @@
 		35BC66B328A0F59E00A96890 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				35BC672E28A2476E00A96890 /* Token */,
+				35BC672D28A2476800A96890 /* Buy */,
+				35BC672C28A2476100A96890 /* Send */,
 				35BC66B428A0F5BA00A96890 /* Home */,
 			);
 			path = ViewModels;
@@ -239,6 +266,54 @@
 				35BC670728A2328A00A96890 /* Toast.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		35BC670F28A246C200A96890 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				35BC671428A246F500A96890 /* Buy.swift */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		35BC671128A246DB00A96890 /* Send */ = {
+			isa = PBXGroup;
+			children = (
+				35BC672428A2473000A96890 /* Send.swift */,
+			);
+			path = Send;
+			sourceTree = "<group>";
+		};
+		35BC671B28A2471B00A96890 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				35BC671D28A2472700A96890 /* Token.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		35BC672C28A2476100A96890 /* Send */ = {
+			isa = PBXGroup;
+			children = (
+				35BC672528A2473000A96890 /* SendViewModel.swift */,
+			);
+			path = Send;
+			sourceTree = "<group>";
+		};
+		35BC672D28A2476800A96890 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				35BC671328A246F500A96890 /* BuyViewModel.swift */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		35BC672E28A2476E00A96890 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				35BC671C28A2472700A96890 /* TokenViewModel.swift */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 		DB8B992CFD4F8336E2EA7032 /* Frameworks */ = {
@@ -526,11 +601,16 @@
 				35BC667528A0C3A600A96890 /* Persistence.swift in Sources */,
 				35BC670C28A2331700A96890 /* Extenstions.swift in Sources */,
 				35BC66B028A0F59100A96890 /* Home.swift in Sources */,
+				35BC672128A2472700A96890 /* Token.swift in Sources */,
 				35BC66BA28A1006200A96890 /* HomeHeader.swift in Sources */,
-				35BC666E28A0C3A400A96890 /* ContentView.swift in Sources */,
+				35BC671E28A2472700A96890 /* TokenViewModel.swift in Sources */,
+				35BC672928A2473000A96890 /* SendViewModel.swift in Sources */,
 				35BC670828A2328A00A96890 /* Toast.swift in Sources */,
 				35BC66FC28A2016600A96890 /* AvatarGenerator.swift in Sources */,
+				35BC671828A246F500A96890 /* Buy.swift in Sources */,
+				35BC671528A246F500A96890 /* BuyViewModel.swift in Sources */,
 				35BC666C28A0C3A400A96890 /* EthereumWalletDemoApp.swift in Sources */,
+				35BC672628A2473000A96890 /* Send.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,14 +618,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BC672228A2472700A96890 /* Token.swift in Sources */,
+				35BC671628A246F500A96890 /* BuyViewModel.swift in Sources */,
 				35BC66B128A0F59100A96890 /* Home.swift in Sources */,
 				35BC670928A2328A00A96890 /* Toast.swift in Sources */,
 				35BC66FD28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC66BB28A1006200A96890 /* HomeHeader.swift in Sources */,
 				35BC66B728A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
 				35BC668228A0C3A600A96890 /* EthereumWalletDemoTests.swift in Sources */,
+				35BC672728A2473000A96890 /* Send.swift in Sources */,
 				35BC670D28A2331700A96890 /* Extenstions.swift in Sources */,
 				35BC670128A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
+				35BC672A28A2473000A96890 /* SendViewModel.swift in Sources */,
+				35BC671F28A2472700A96890 /* TokenViewModel.swift in Sources */,
+				35BC671928A246F500A96890 /* Buy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,8 +643,14 @@
 				35BC66B228A0F59100A96890 /* Home.swift in Sources */,
 				35BC668E28A0C3A600A96890 /* EthereumWalletDemoUITestsLaunchTests.swift in Sources */,
 				35BC66B828A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
+				35BC671A28A246F500A96890 /* Buy.swift in Sources */,
 				35BC66FE28A2016600A96890 /* AvatarGenerator.swift in Sources */,
+				35BC671728A246F500A96890 /* BuyViewModel.swift in Sources */,
+				35BC672B28A2473000A96890 /* SendViewModel.swift in Sources */,
 				35BC670228A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
+				35BC672028A2472700A96890 /* TokenViewModel.swift in Sources */,
+				35BC672828A2473000A96890 /* Send.swift in Sources */,
+				35BC672328A2472700A96890 /* Token.swift in Sources */,
 				35BC670E28A2331700A96890 /* Extenstions.swift in Sources */,
 				35BC670A28A2328A00A96890 /* Toast.swift in Sources */,
 				35BC66BC28A1006200A96890 /* HomeHeader.swift in Sources */,

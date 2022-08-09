@@ -22,15 +22,6 @@ struct Home: View {
 //    }
 
     var body: some View {
-//        Text("Hello")
-//        let userModel = viewModel.userModel!;
-//        let walletAddress = userModel.walletAddress;
-//        let index = walletAddress.index(walletAddress.endIndex, offsetBy: -4);
-//        let address = "\(walletAddress.prefix(6))..\(walletAddress.suffix(from: index))";
-//        let tokens = userModel.tokens;
-//        let userModels = viewModel.userModels;
-
-        let currentAccount = viewModel.accounts
         NavigationView {
             List {
                 HomeHeader()
@@ -59,16 +50,14 @@ struct Home: View {
         }) {
             Image("Refresh")
                 .resizable().aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20).disabled(viewModel.fetchingPriceData)
+                .frame(width: 20, height: 20).disabled(viewModel.isFetchingPrice)
         })
-
-        }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        Home().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }

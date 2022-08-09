@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeHeader: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
 
     var body: some View {
         VStack {
@@ -121,11 +121,11 @@ struct HomeHeader: View {
 
         Text("TOKENS").font(.system(size: 12))
             .fontWeight(.bold)
-            .foregroundColor(UIHelper.themeColor)
+            .foregroundColor(Color.init(hex: 0x387ace))
             .padding(EdgeInsets(top: 3, leading: 0, bottom: 0, trailing: 0))
 
         Rectangle()
-            .fill(UIHelper.themeColor)
+            .fill(Color.init(hex: 0x387ace))
             .frame(height: 2)
     }
 }
