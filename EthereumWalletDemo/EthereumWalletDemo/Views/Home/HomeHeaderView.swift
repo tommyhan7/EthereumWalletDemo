@@ -1,5 +1,5 @@
 //
-//  HomeHeader.swift
+//  HomeHeaderView.swift
 //  EthereumWalletDemo
 //
 //  Created by LeonHan on 2022/8/8.
@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct HomeHeader: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
+struct HomeHeaderView: View {
     @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
 
     var body: some View {
@@ -54,7 +52,7 @@ struct HomeHeader: View {
 
         HStack {
             NavigationLink(
-                destination: SendToView(selectedTokenAbbr: "")
+                destination: SendView(selectedTokenAbbr: "")
             ) {
                 VStack {
                     Image("Send")
@@ -130,8 +128,8 @@ struct HomeHeader: View {
     }
 }
 
-struct HomeHeader_Previews: PreviewProvider {
+struct HomeHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHeader()
+        HomeHeaderView()
     }
 }

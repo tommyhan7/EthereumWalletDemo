@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  HomeView.swift
 //  EthereumWalletDemo
 //
 //  Created by LeonHan on 2022/8/8.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
@@ -24,7 +24,7 @@ struct Home: View {
     var body: some View {
         NavigationView {
             List {
-                HomeHeader()
+                HomeHeaderView()
                 ForEach(viewModel.accounts) { account in
                     NavigationLink {
                         Text("Item at \(account.name!)")
@@ -41,7 +41,13 @@ struct Home: View {
             ToolbarItem(placement: .principal) {
                 VStack {
                     Text("Wallet")
-                    Text("subtitle")
+                    HStack {
+                        Circle()
+                            .size(width: 3, height: 3)
+                            .foregroundColor(.green)
+                        Spacer(minLength: 6)
+                        Text("Ethereum Mainnet")
+                    }
                 }
             }
         }
@@ -56,8 +62,8 @@ struct Home: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        Home().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+        HomeView().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
     }
 }
