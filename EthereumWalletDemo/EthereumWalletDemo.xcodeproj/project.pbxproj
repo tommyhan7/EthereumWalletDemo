@@ -24,9 +24,6 @@
 		35BC66BA28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
 		35BC66BB28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
 		35BC66BC28A1006200A96890 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66B928A1006200A96890 /* HomeHeader.swift */; };
-		35BC66FC28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
-		35BC66FD28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
-		35BC66FE28A2016600A96890 /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FB28A2016600A96890 /* AvatarGenerator.swift */; };
 		35BC670028A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
 		35BC670128A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
 		35BC670228A2160C00A96890 /* EthereumNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */; };
@@ -93,7 +90,6 @@
 		35BC66AF28A0F59100A96890 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		35BC66B528A0F5EF00A96890 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		35BC66B928A1006200A96890 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
-		35BC66FB28A2016600A96890 /* AvatarGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarGenerator.swift; sourceTree = "<group>"; };
 		35BC66FF28A2160C00A96890 /* EthereumNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumNetworkService.swift; sourceTree = "<group>"; };
 		35BC670728A2328A00A96890 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		35BC670B28A2331700A96890 /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
@@ -262,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				35BC670B28A2331700A96890 /* Extenstions.swift */,
-				35BC66FB28A2016600A96890 /* AvatarGenerator.swift */,
 				35BC670728A2328A00A96890 /* Toast.swift */,
 			);
 			path = Utils;
@@ -606,7 +601,6 @@
 				35BC671E28A2472700A96890 /* TokenViewModel.swift in Sources */,
 				35BC672928A2473000A96890 /* SendViewModel.swift in Sources */,
 				35BC670828A2328A00A96890 /* Toast.swift in Sources */,
-				35BC66FC28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC671828A246F500A96890 /* Buy.swift in Sources */,
 				35BC671528A246F500A96890 /* BuyViewModel.swift in Sources */,
 				35BC666C28A0C3A400A96890 /* EthereumWalletDemoApp.swift in Sources */,
@@ -622,7 +616,6 @@
 				35BC671628A246F500A96890 /* BuyViewModel.swift in Sources */,
 				35BC66B128A0F59100A96890 /* Home.swift in Sources */,
 				35BC670928A2328A00A96890 /* Toast.swift in Sources */,
-				35BC66FD28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC66BB28A1006200A96890 /* HomeHeader.swift in Sources */,
 				35BC66B728A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
 				35BC668228A0C3A600A96890 /* EthereumWalletDemoTests.swift in Sources */,
@@ -644,7 +637,6 @@
 				35BC668E28A0C3A600A96890 /* EthereumWalletDemoUITestsLaunchTests.swift in Sources */,
 				35BC66B828A0F5EF00A96890 /* HomeViewModel.swift in Sources */,
 				35BC671A28A246F500A96890 /* Buy.swift in Sources */,
-				35BC66FE28A2016600A96890 /* AvatarGenerator.swift in Sources */,
 				35BC671728A246F500A96890 /* BuyViewModel.swift in Sources */,
 				35BC672B28A2473000A96890 /* SendViewModel.swift in Sources */,
 				35BC670228A2160C00A96890 /* EthereumNetworkService.swift in Sources */,
