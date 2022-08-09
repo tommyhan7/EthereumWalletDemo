@@ -38,6 +38,7 @@ struct HomeView: View {
             ScrollView {
                 HomeHeaderView(isPresenting: $isShowingSelectAccounts)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
                 ForEach(tokens) { tokenModel in
                     HStack {
                         Image(tokenModel.name ?? "")
@@ -71,21 +72,21 @@ struct HomeView: View {
                     Divider()
                 }
             }
-            .toast(isShow: $viewModel.isShowingToast, info:  viewModel.toastMessage, duration: 1)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    VStack(alignment: .center, spacing: 3, content: {
+                    VStack {
                         Text("Wallet")
                             .font(.system(size: 18, weight: .semibold, design: Font.Design.default))
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: -3, trailing: 0))
                         HStack {
                             Circle()
-                                .size(width: 5, height: 5)
+                                .frame(width: 5, height: 5)
                                 .foregroundColor(.green)
-                                .allowsTightening(true)
                             Text("Ethereum Mainnet")
                                 .font(.system(size: 12, weight: .regular, design: Font.Design.default))
                         }
-                    })
+                    }
                 }
 
                 ToolbarItem {
@@ -100,6 +101,7 @@ struct HomeView: View {
                     }
                 }
             }
+            .toast(isShow: $viewModel.isShowingToast, info:  viewModel.toastMessage, duration: 1)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
