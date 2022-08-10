@@ -15,6 +15,7 @@ struct HomeView: View {
     @State private var isShowingSelectAccounts = false
     @State private var navigateToSend = false
     @State private var selectedTokenAbbr = ""
+    @State private var selectedTokenCount: Double = 0
     @State private var shouldNavigateToTokenPage = false
 
     private var tokens: [Token] {
@@ -68,6 +69,7 @@ struct HomeView: View {
                     .contentShape(Rectangle())
                     .onTapGesture {
                         selectedTokenAbbr = tokenModel.name ?? ""
+                        selectedTokenCount = tokenModel.quantity
                         shouldNavigateToTokenPage = true
                     }
 
@@ -75,7 +77,7 @@ struct HomeView: View {
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
 
                     NavigationLink(
-                        destination: TokenView(selectedTokenAbbr: selectedTokenAbbr),
+                        destination: TokenView(selectedTokenAbbr: selectedTokenAbbr, selectedTokenCount: selectedTokenCount),
                         isActive: $shouldNavigateToTokenPage
                     ){
                         EmptyView()

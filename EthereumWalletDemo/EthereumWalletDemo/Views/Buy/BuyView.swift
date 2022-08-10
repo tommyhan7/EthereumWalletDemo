@@ -164,8 +164,6 @@ struct BuyView: View {
         .onTapGesture {
             hideKeyboard()
         }
-        .onAppear() {
-        }
     }
 }
 
