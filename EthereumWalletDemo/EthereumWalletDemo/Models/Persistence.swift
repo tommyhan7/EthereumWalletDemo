@@ -94,17 +94,40 @@ struct PersistenceController {
         }
     }
 
-    func delete(token: Token) {
+    func send(tokenName: String, amount: Double) -> Bool {
+        guard let tokens = currentAccount?.tokens else {
+            return false
+        }
+        for currentToken in tokens {
+            if let currentTokenObj = currentToken as? Token, currentTokenObj.name == tokenName {
+                if currentTokenObj.quantity > amount {
+                    currentTokenObj.quantity -= amount
+                } else {
+                    return false
+                }
+            }
+        }
+
+        do {
+            try container.viewContext.save()
+            return true
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+
+    func receive(tokenName: String, amount: Double) {
         guard let tokens = currentAccount?.tokens else {
             return
         }
-        let tokenSet: NSMutableSet = NSMutableSet.init(set: tokens)
-        for currentToken in tokenSet {
-            if let currentTokenObj = currentToken as? Token, currentTokenObj.name == token.name {
-                tokenSet.remove(currentToken)
+        for currentToken in tokens {
+            if let currentTokenObj = currentToken as? Token, currentTokenObj.name == tokenName {
+                currentTokenObj.quantity += amount
             }
         }
-        currentAccount?.tokens = tokenSet
 
         do {
             try container.viewContext.save()

@@ -3,6 +3,7 @@
     <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="avatar" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isCurrent" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="tokens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Token"/>
@@ -12,7 +13,7 @@
         <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-9" width="128" height="104"/>
+        <element name="Account" positionX="-63" positionY="-9" width="128" height="119"/>
         <element name="Token" positionX="-54" positionY="0" width="128" height="59"/>
     </elements>
 </model>

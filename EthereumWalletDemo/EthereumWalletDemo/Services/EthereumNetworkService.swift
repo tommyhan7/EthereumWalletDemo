@@ -72,7 +72,6 @@ class EthereumNetworkService {
                                     EthereumNetworkService.priceDict[abbr] = price
                                 }
                             }
-                            print(jsonObject)
                         } catch {
                             print("error")
                         }
